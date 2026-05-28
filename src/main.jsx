@@ -19,6 +19,6 @@ import Theme from './components/Theme'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Theme />
+    <App />
   </StrictMode>,
 )
