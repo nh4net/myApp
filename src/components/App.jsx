@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './todolist/NavBar';
 import Home from './todolist/Home';
 import TodoList from './todolist/TodoList';
 import TodoViewer from './todolist/TodoViewer';
 import Error from './todolist/Error';
 
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
+
 export default function App() {
-      return (
-            <BrowserRouter basename="/myApp">
+      return (            
+            <HashRouter>
                   <NavBar />
                   <Routes>
                         <Route path="/" element={<Home />} />
@@ -16,6 +17,8 @@ export default function App() {
                         <Route path="/todolist/:id" element={<TodoViewer />} />
                         <Route path="*" element={<Error />} />
                   </Routes>
-            </BrowserRouter>
+            </HashRouter>
       );
 }
+
+
