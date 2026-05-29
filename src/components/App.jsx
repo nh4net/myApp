@@ -8,7 +8,7 @@ import Error from './todolist/Error';
 
 export default function App() {
       return (
-            <BrowserRouter basename="/myApp/">
+            <BrowserRouter >
                   <NavBar />
                   <Routes>
                         <Route path="/" element={<Home />} />
